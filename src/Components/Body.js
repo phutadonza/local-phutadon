@@ -179,7 +179,7 @@ function Body() {
         </div>
       )}
       {qr && (
-        <div className="qr-modal">
+        <div className="code-modal">
           <QRCode value={showqr} size={256} />
           <button className="btn btn-sm btn-danger mt-2" onClick={onClose}>
             Close
