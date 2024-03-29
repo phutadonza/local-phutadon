@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import QRCode from "react-qr-code";
-import { FiRefreshCcw } from "react-icons/fi";
 import { AiFillDelete } from "react-icons/ai";
 import { SlPicture } from "react-icons/sl";
 const baseUrl = 'https://server-phutadon.azurewebsites.net'
@@ -63,9 +62,9 @@ function Body() {
       },
       body: JSON.stringify({ _id: id }),
     })
-      .then(() => fetchData())
       .catch((err) => alert(err));
   };
+
   const onOpen = (short) => {
     setShowqr(short);
     setQr(true);
