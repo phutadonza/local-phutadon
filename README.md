@@ -23,7 +23,7 @@ npm install
 npm start 
 ```
 # ถ้าอยากรันบน localhost  (ในไฟล์ package.json ได้กำหนด proxy เป็น http://localhost:5000)
-ให้เข้า Visual Studio Code ลบโค้ดในบรรทัดต่อไปนี้
+ให้เข้า Visual Studio Code ไปแก้ไขไฟล์ Body.js เพื่อลบโค้ดในบรรทัดต่อไปนี้
 ## บรรทัด 23
 ### จาก await fetch(baseUrl + "/api/url/create", {
 ### เป็น 
