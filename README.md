@@ -11,7 +11,7 @@
 ## ทำการ clone repository 
 ## โดยใช้คำสั่งใน cmd ดังนี้ 
 ``` 
-https://github.com/phutadonza/shorturl-ptd.git
+git clone https://github.com/phutadonza/shorturl-ptd.git
 ```
 ## ทำการติดตั้งตัว packages โดยใช้คำสั่งดังนี้ 
 ```
