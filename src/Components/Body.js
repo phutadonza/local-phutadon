@@ -88,11 +88,11 @@ function Body() {
               <QRCode value={shortUrl} className="card-img-top p-1"></QRCode>
               <div className="card-title">shorturl</div>
               <a
-                href={shortUrl}
+                href={`${baseUrl}/${item.Short_url}`}
                 className="card-link mt-4 mb-4"
                 target="_blank"
               >
-                {shortUrl}
+                {`${baseUrl}/${item.Short_url}`}
               </a>
             </div>
           </div>
