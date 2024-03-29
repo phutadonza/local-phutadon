@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import QRCode from "react-qr-code";
 import { FiRefreshCcw } from "react-icons/fi";
-import baseUrl from "../baseUrl";
 import { AiFillDelete } from "react-icons/ai";
 import { SlPicture } from "react-icons/sl";
+const baseUrl = 'https://server-phutadon.azurewebsites.net'
+
 function Body() {
+  
   const [url, setUrl] = useState("");
   const [shortUrl, setShortUrl] = useState([]);
   const [data, setData] = useState([]);
