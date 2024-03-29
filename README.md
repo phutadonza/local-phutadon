@@ -17,7 +17,10 @@ https://github.com/phutadonza/shorturl-ptd.git
 cd shorturl-ptd
 npm install
 ```
-# ใช้คำสั่ง ` npm stall `
+## ใช้คำสั่ง 
+```
+bash npm stall 
+```
 ### `npm start`
 
 Runs the app in the development mode.\
