@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import QRCode from "react-qr-code";
 import { FiRefreshCcw } from "react-icons/fi";
 import baseUrl from "../baseUrl";
-import { AiOutlinePicture } from "react-icons/ai";
 import { AiFillDelete } from "react-icons/ai";
 import { SlPicture } from "react-icons/sl";
 function Body() {
