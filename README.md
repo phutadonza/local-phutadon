@@ -1,12 +1,15 @@
-### ** ขั้นตอนการตั้งค่าและการใช้เว็บ Shorturl (Frontend) **
+# ขั้นตอนการตั้งค่าและการใช้เว็บ Shorturl (Frontend)
 
-##1 สิ่งที่คุณจำเป็นต้องมี
+## 1 สิ่งที่คุณจำเป็นต้องมี
 
 - โปรแกรม Git [ https://git-scm.com/downloads ]
 - Node.js [ https://nodejs.org/en/download ]
 
 ## 2 ให้คุณทำการ clone repository
-
+# โดยใช้คำสั่งใน cmd ดังนี้ : 
+```bash
+git clone https://github.com/phutadonza/local-phutadon.git
+```
 
 ### `npm start`
 
