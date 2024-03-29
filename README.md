@@ -5,11 +5,7 @@
 - โปรแกรม Git [ https://git-scm.com/downloads ]
 - Node.js [ https://nodejs.org/en/download ]
 
-## 2 ให้คุณทำการ clone repository
-# โดยใช้คำสั่งใน cmd ดังนี้ : 
-```bash
-git clone https://github.com/phutadonza/local-phutadon.git
-```
+## 2 ให้คุณทำการ clone repository โดยใช้คำสั่งใน cmd ดังนี้ : ```bash git clone https://github.com/phutadonza/local-phutadon.git ```
 
 ### `npm start`
 
