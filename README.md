@@ -1,10 +1,12 @@
-# Getting Started with Create React App
+### **ขั้นตอนการตั้งค่าและการใช้เว็บ Shorturl (Frontend)**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##1 สิ่งที่คุณจำเป็นต้องมี
 
-## Available Scripts
+- โปรแกรม Git [https://git-scm.com/downloads]
+- Node.js [https://nodejs.org/en/download]
 
-In the project directory, you can run:
+##2 ให้คุณทำการ clone repository
+
 
 ### `npm start`
 
