@@ -8,12 +8,13 @@
 ## 2 ทำการ clone repository 
 # โดยใช้คำสั่งใน cmd ดังนี้ 
 ``` bash
-git clone https://github.com/phutadonza/local-phutadon.git 
+https://github.com/phutadonza/shorturl-ptd.git
 ```
 ## 3 ทำการติดตั้งตัว packages
 # โดยใช้คำสั่งดังนี้ 
 ```bash
-cd phutadon-c
+cd shorturl-ptd
+npm install
 ```
 
 ### `npm start`
