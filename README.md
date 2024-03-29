@@ -1,22 +1,23 @@
 # ขั้นตอนการตั้งค่าและการใช้เว็บ Shorturl (Frontend)
 
-## 1 สิ่งที่จำเป็นต้องมี
+## สิ่งที่จำเป็นต้องมี
 
 - โปรแกรม Git [ https://git-scm.com/downloads ]
 - Node.js [ https://nodejs.org/en/download ]
+- Visual Studio Code [ https://code.visualstudio.com/ ]
 
-## 2 ทำการ clone repository 
+## ทำการ clone repository 
 # โดยใช้คำสั่งใน cmd ดังนี้ 
 ``` bash
 https://github.com/phutadonza/shorturl-ptd.git
 ```
-## 3 ทำการติดตั้งตัว packages
+## ทำการติดตั้งตัว packages
 # โดยใช้คำสั่งดังนี้ 
 ```bash
 cd shorturl-ptd
 npm install
 ```
-
+# ใช้คำสั่ง ` npm stall `
 ### `npm start`
 
 Runs the app in the development mode.\
