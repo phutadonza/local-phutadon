@@ -10,7 +10,6 @@ function Body() {
   const [url, setUrl] = useState("");
   const [shortUrl, setShortUrl] = useState([]);
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [qrcodeVisible, setQRCodeVisible] = useState(false);
   let [showqr, setShowqr] = useState("");
   let [qr, setQr] = useState(false);
@@ -31,7 +30,6 @@ function Body() {
     })
       .then((res) => res.json())
       .then((result) => {
-        setLoading(true);
         //console.log(result.shorturl);
         setShortUrl(result.shorturl);
         setQRCodeVisible(true);
@@ -68,11 +66,6 @@ function Body() {
       .then(() => fetchData())
       .catch((err) => alert(err));
   };
-
-  const handleRefresh = () => {
-    fetchData();
-  };
-
   const onOpen = (short) => {
     setShowqr(short);
     setQr(true);
@@ -119,12 +112,6 @@ function Body() {
           onClick={handleSubmit}
         >
           Create url
-        </button>
-        <button
-          className="btn btn-sm btn-outline-primary "
-          onClick={handleRefresh}
-        >
-          <FiRefreshCcw />
         </button>
       </form>
 
