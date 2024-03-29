@@ -1,5 +1,7 @@
 # ขั้นตอนการตั้งค่าและการใช้เว็บ Shorturl (Frontend)
 
+ตั้งค่าและใช้งานเซิร์ฟเวอร์สำหรับเว็บไซต์ย่อ URL ที่โฮสต์บน Netlify โดยใช้ตัวอย่างจาก https://phutadon.netlify.app/
+
 ## สิ่งที่จำเป็นต้องมี
 
 - โปรแกรม Git [ https://git-scm.com/downloads ]
