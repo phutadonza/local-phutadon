@@ -10,7 +10,7 @@ function Body() {
   const [shortUrl, setShortUrl] = useState([]);
   const [data, setData] = useState([]);
   const [qrcodeVisible, setQRCodeVisible] = useState(false);
-  const [c,setC] = useState();
+  let [c,setC] = useState();
   let [showqr, setShowqr] = useState("");
   let [qr, setQr] = useState(false);
 
