@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import QRCode from "react-qr-code";
 import { AiFillDelete } from "react-icons/ai";
 import { SlPicture } from "react-icons/sl";
+import { FaRegCopy } from "react-icons/fa6";
 const baseUrl = 'https://server-phutadon.azurewebsites.net'
 
 function Body() {
