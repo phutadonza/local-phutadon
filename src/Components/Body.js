@@ -10,7 +10,6 @@ function Body() {
   const [shortUrl, setShortUrl] = useState([]);
   const [data, setData] = useState([]);
   const [qrcodeVisible, setQRCodeVisible] = useState(false);
-  let [c,setC] = useState();
   let [showqr, setShowqr] = useState("");
   let [qr, setQr] = useState(false);
 
@@ -41,19 +40,17 @@ function Body() {
     await fetch(baseUrl + "/api/url/data")
       .then((res) => res.json())
       .then((result) => {
-        //console.log(result);
+        console.log(result);
         setData(result);
       })
       .catch((err) => alert(err));
   };
 
-  const cO = (count) =>{
-    setC = count
-  }
+
 
   useEffect(() => {
     fetchData();
-  }, [shortUrl,c]);
+  });
 
   const handleChange = (e) => {
     setUrl(e.target.value);
@@ -67,7 +64,7 @@ function Body() {
       },
       body: JSON.stringify({ _id: id }),
     })
-      .then(() => fetchData())
+      //.then(() => fetchData())
       .catch((err) => alert(err));
   };
 
@@ -191,7 +188,7 @@ function Body() {
                       color="blue"
                     />
                   </td>
-                  <td className="text-center">{cO(item.count)}</td>
+                  <td className="text-center">{item.count}</td>
                 </tr>
               ))}
             </tbody>
