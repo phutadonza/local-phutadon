@@ -5,7 +5,6 @@ import { SlPicture } from "react-icons/sl";
 const baseUrl = 'https://server-phutadon.azurewebsites.net'
 
 function Body() {
-  
   const [url, setUrl] = useState("");
   const [shortUrl, setShortUrl] = useState([]);
   const [data, setData] = useState([]);
@@ -48,7 +47,7 @@ function Body() {
 
   useEffect(() => {
     fetchData();
-  },[shortUrl]);
+  }, [shortUrl]);
 
   const handleChange = (e) => {
     setUrl(e.target.value);
@@ -62,7 +61,7 @@ function Body() {
       },
       body: JSON.stringify({ _id: id }),
     })
-      .then(() => fetchData()) 
+      .then(() => fetchData())
       .catch((err) => alert(err));
   };
 
@@ -72,6 +71,11 @@ function Body() {
   };
   const onClose = () => {
     setQr(false);
+  };
+
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text);
+    alert("Copied to clipboard!");
   };
 
   return (
@@ -89,6 +93,15 @@ function Body() {
               >
                 {shortUrl}
               </a>
+              <FaRegCopy
+                      size={24}
+                      color="green"
+                      className=""
+                      onClick={() =>
+                        copyToClipboard(`${shortUrl}`)
+                      }
+                      style={{ marginLeft: "5px" }}
+                    />
             </div>
           </div>
         )}
@@ -124,6 +137,7 @@ function Body() {
                 <th scope="col">Full URL</th>
                 <th scope="col">Short URL</th>
                 <th scope="col"></th>
+                <th scope="col"></th>
                 <th scope="col">QR</th>
                 <th scope="col">Count</th>
               </tr>
@@ -138,9 +152,22 @@ function Body() {
                     </a>
                   </td>
                   <td className="text-center">
-                    <a href={`${baseUrl}/${item.Short_url}`} target="_blank">
-                      {`${baseUrl}/${item.Short_url}`}
-                    </a>
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                      <a href={`${baseUrl}/${item.Short_url}`} target="_blank">
+                        {`${baseUrl}/${item.Short_url}`}
+                      </a>
+                    </div>
+                  </td>
+                  <td className="text-center">
+                    <FaRegCopy
+                      size={24}
+                      color="green"
+                      className=""
+                      onClick={() =>
+                        copyToClipboard(`${baseUrl}/${item.Short_url}`)
+                      }
+                      style={{ marginLeft: "5px" }}
+                    />
                   </td>
                   <td className="text-center">
                     <AiFillDelete
