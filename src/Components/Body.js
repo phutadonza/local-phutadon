@@ -3,7 +3,7 @@ import QRCode from "react-qr-code";
 import { AiFillDelete } from "react-icons/ai";
 import { SlPicture } from "react-icons/sl";
 import { FaRegCopy } from "react-icons/fa6";
-const baseUrl = 'https://server-phutadon.azurewebsites.net'
+const baseUrl = "https://server-phutadon.azurewebsites.net";
 
 function Body() {
   const [url, setUrl] = useState("");
@@ -12,7 +12,6 @@ function Body() {
   const [qrcodeVisible, setQRCodeVisible] = useState(false);
   let [showqr, setShowqr] = useState("");
   let [qr, setQr] = useState(false);
-
   const handleSubmit = async () => {
     const isValidUrl = /^(http|https):\/\/.*$/.test(url);
     if (!isValidUrl) {
@@ -35,7 +34,6 @@ function Body() {
       })
       .catch((err) => alert(err));
   };
-
   const fetchData = async () => {
     await fetch(baseUrl + "/api/url/data")
       .then((res) => res.json())
@@ -46,10 +44,12 @@ function Body() {
       .catch((err) => alert(err));
   };
 
-
-
   useEffect(() => {
-    fetchData();
+    const interval = setInterval(() => {
+      fetchData();
+    }, 250); // 10 วินาที
+
+    return () => clearInterval(interval);
   });
 
   const handleChange = (e) => {
@@ -64,7 +64,7 @@ function Body() {
       },
       body: JSON.stringify({ _id: id }),
     })
-      //.then(() => fetchData())
+      .then(() => fetchData())
       .catch((err) => alert(err));
   };
 
@@ -97,14 +97,12 @@ function Body() {
                 {shortUrl}
               </a>
               <FaRegCopy
-                      size={24}
-                      color="green"
-                      className=""
-                      onClick={() =>
-                        copyToClipboard(`${shortUrl}`)
-                      }
-                      style={{ marginLeft: "5px" }}
-                    />
+                size={24}
+                color="green"
+                className=""
+                onClick={() => copyToClipboard(`${shortUrl}`)}
+                style={{ marginLeft: "5px" }}
+              />
             </div>
           </div>
         )}
