@@ -49,7 +49,7 @@ function Body() {
 
   useEffect(() => {
     fetchData();
-  }, [shortUrl],[c]);
+  }, [shortUrl,c]);
 
   const handleChange = (e) => {
     setUrl(e.target.value);
