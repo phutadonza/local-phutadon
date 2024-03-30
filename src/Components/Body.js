@@ -47,6 +47,10 @@ function Body() {
       .catch((err) => alert(err));
   };
 
+  const cO = (count) =>{
+    setC = count
+  }
+
   useEffect(() => {
     fetchData();
   }, [shortUrl,c]);
@@ -187,7 +191,7 @@ function Body() {
                       color="blue"
                     />
                   </td>
-                  <td className="text-center">{item.count}{setC=item.count}</td>
+                  <td className="text-center">{cO(item.count)}</td>
                 </tr>
               ))}
             </tbody>
