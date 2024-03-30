@@ -48,7 +48,7 @@ function Body() {
 
   useEffect(() => {
     fetchData();
-  });
+  },[shortUrl]);
 
   const handleChange = (e) => {
     setUrl(e.target.value);
@@ -62,6 +62,7 @@ function Body() {
       },
       body: JSON.stringify({ _id: id }),
     })
+      .then(() => fetchData()) 
       .catch((err) => alert(err));
   };
 
