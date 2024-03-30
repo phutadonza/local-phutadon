@@ -10,6 +10,7 @@ function Body() {
   const [shortUrl, setShortUrl] = useState([]);
   const [data, setData] = useState([]);
   const [qrcodeVisible, setQRCodeVisible] = useState(false);
+  const [c,setC] = useState();
   let [showqr, setShowqr] = useState("");
   let [qr, setQr] = useState(false);
 
@@ -48,7 +49,7 @@ function Body() {
 
   useEffect(() => {
     fetchData();
-  }, [shortUrl]);
+  }, [shortUrl],[c]);
 
   const handleChange = (e) => {
     setUrl(e.target.value);
@@ -186,7 +187,7 @@ function Body() {
                       color="blue"
                     />
                   </td>
-                  <td className="text-center">{item.count}</td>
+                  <td className="text-center">{item.count}{setC=item.count}</td>
                 </tr>
               ))}
             </tbody>
