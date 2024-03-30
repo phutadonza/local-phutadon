@@ -12,6 +12,7 @@ function Body() {
   const [qrcodeVisible, setQRCodeVisible] = useState(false);
   let [showqr, setShowqr] = useState("");
   let [qr, setQr] = useState(false);
+
   const handleSubmit = async () => {
     const isValidUrl = /^(http|https):\/\/.*$/.test(url);
     if (!isValidUrl) {
@@ -41,14 +42,12 @@ function Body() {
         console.log(result);
         setData(result);
       })
-      .catch((err) => alert(err));
   };
-
   useEffect(() => {
     const interval = setInterval(() => {
       fetchData();
     }, 250); // 10 วินาที
-
+  
     return () => clearInterval(interval);
   });
 
@@ -154,7 +153,10 @@ function Body() {
                   </td>
                   <td className="text-center">
                     <div style={{ display: "flex", alignItems: "center" }}>
-                      <a href={`${baseUrl}/${item.Short_url}`} target="_blank">
+                      <a
+                        href={`${baseUrl}/${item.Short_url}`}
+                        target="_blank"
+                      >
                         {`${baseUrl}/${item.Short_url}`}
                       </a>
                     </div>
